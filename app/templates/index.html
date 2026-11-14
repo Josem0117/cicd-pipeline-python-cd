@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="text" name="num1" placeholder="Número 1" aria-label="Número 1" required>
+        <input type="text" name="num2" placeholder="Número 2" aria-label="Número 2" required>
+        <select name="operacion" aria-label="Operación">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if resultado is not none %}
+    <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>
