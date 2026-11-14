@@ -17,6 +17,20 @@ def browser():
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    # Staging y Producción se sirven por HTTP (el ALB del laboratorio no tiene
+    # certificado). Chrome intenta primero HTTPS y muestra una advertencia en sitios
+    # públicos sin HTTPS; se desactiva para que cargue la aplicación directamente.
+    options.add_argument(
+        "--disable-features=HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,"
+        "HttpsFirstModeV2,HttpsFirstModeIncognito"
+    )
+    options.add_experimental_option(
+        "prefs",
+        {
+            "https_only_mode_enabled": False,
+            "https_first_balanced_mode_enabled": False,
+        },
+    )
     driver = webdriver.Chrome(options=options)
 
     yield driver
