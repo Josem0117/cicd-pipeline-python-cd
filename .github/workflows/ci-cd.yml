@@ -76,7 +76,6 @@ jobs:
           terraform fmt -check -recursive -diff
           terraform init -backend=false
           terraform validate
-          cat .terraform.lock.hcl
 
       - name: Build Docker image
         run: docker build -t "$IMAGE_NAME:${{ github.sha }}" .
