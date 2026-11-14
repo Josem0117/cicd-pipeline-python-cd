@@ -6,7 +6,7 @@ import secrets
 from flask import Flask, render_template, request
 from flask_wtf.csrf import CSRFProtect
 
-from .calculadora import dividir, multiplicar, restar, sumar
+from .calculadora import dividir, modulo, multiplicar, potencia, restar, sumar
 
 app = Flask(__name__)
 # Clave para firmar el token CSRF: se toma del entorno o se genera al iniciar.
@@ -18,6 +18,8 @@ OPERACIONES = {
     "restar": restar,
     "multiplicar": multiplicar,
     "dividir": dividir,
+    "potencia": potencia,
+    "modulo": modulo,
 }
 
 
