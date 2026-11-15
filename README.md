@@ -24,7 +24,8 @@ Jose Miguel Blanco
 Las dos URL dejan de responder cuando se destruye la infraestructura (sección 10 del
 taller).
 
-Producción con una de las operaciones nuevas:
+Producción con una de las operaciones nuevas (Potencia: 2 elevado a 3 = 8.0; el
+formulario vuelve a mostrar "Sumar" después de calcular):
 
 ![Producción con una operación nueva](docs/evidencias/produccion.png)
 
