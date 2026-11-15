@@ -138,9 +138,7 @@ problemas que aparecieron fueron de integración más que de código: SonarCloud
 el Quality Gate por hallazgos de seguridad en Terraform, y las pruebas de aceptación
 que pasaban contra el contenedor fallaron contra Staging porque Chrome no abre por
 defecto sitios públicos sin HTTPS. Ese segundo fallo mostró para qué sirve Staging: se
-detectó ahí y nunca llegó a Producción. También quedó clara la limitación de las
-credenciales temporales del laboratorio, que obligan a renovar los secretos en cada
-sesión.
+detectó ahí y nunca llegó a Producción.
 
 ### 7. ¿Entrega Continua o Despliegue Continuo?
 
