@@ -132,8 +132,7 @@ con latencia y tasa de errores.
 
 ### 6. Experiencia de cada integrante
 
-**Jose Miguel Blanco:** lo más valioso fue ver el recorrido completo de un cambio,
-desde el Pull Request hasta Producción, sin pasos manuales salvo la aprobación. Los
+**Jose Miguel Blanco:** lo más valioso fue ver el recorrido completo de un cambio. Los
 problemas que aparecieron fueron de integración más que de código: SonarCloud bloqueó
 el Quality Gate por hallazgos de seguridad en Terraform, y las pruebas de aceptación
 que pasaban contra el contenedor fallaron contra Staging porque Chrome no abre por
